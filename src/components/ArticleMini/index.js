@@ -10,7 +10,7 @@ const ArticleMini = () => {
                     <p>Fecha 5/22/2019</p>
                 </Col>
                 <Col>
-                    <p>Autor: Sanson Sansa Sense</p>
+                    <p>Autor: Adsadasdas</p>
                 </Col>
             </Row>
             <Row>
@@ -20,12 +20,28 @@ const ArticleMini = () => {
             </Row>
             <Row>
                 <Col>
-                    <h1>CHICO BRONY QUEMA COLEGIO EN REPRESALIAS A SU LENTA RESPUESTA A SUS RECLAMOS</h1>
+                    <h1>LOREM IMPSUM DOLOR SIT AMET ADSESAD KDKFDFNDI ADA FKDJSNFLS</h1>
                 </Col>
             </Row>
             <Row>
                 <Col>
-                    <h4>Paso en la localidad de venado tuerto, el auto del hecho fafaf ajhfjksha kjfhk jhaskf jhakfj hakfh aksfj haksf hjaksfj hakjfh akjsf hajkf </h4>
+                    <h4>lorem ipsum dolor sit amet asddafs jndfjg sdfllsdf</h4>
+                </Col>
+            </Row>
+
+            <p>News</p>
+            <Row type="flex" justify="space-around">
+                <Col span={4}>
+                    <img className={"z-preview"} src={"https://via.placeholder.com/600x400"}/>
+                </Col>
+                <Col span={4}>
+                    <img className={"z-preview"} src={"https://via.placeholder.com/600x400"}/>
+                </Col>
+                <Col span={4}>
+                    <img className={"z-preview"} src={"https://via.placeholder.com/600x400"}/>
+                </Col>
+                <Col span={4}>
+                    <img className={"z-preview"} src={"https://via.placeholder.com/600x400"}/>
                 </Col>
             </Row>
         </div>
