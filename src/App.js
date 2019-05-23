@@ -2,22 +2,21 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import Drawer from './components/Drawer'
 import ArticlesContainer from './components/ArticlesContainer'
+import { Layout } from 'antd'
 import './App.css'
 
-function App() {
+const { Header, Footer, Sider, Content } = Layout;
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <Navbar />
-        <Drawer />
-      </header>
-
-      <div>
-        <Drawer />
-        <ArticlesContainer />
-      </div>
+      <Layout>
+        <Header>Header</Header>
+        <Content>Content</Content>
+        <Footer>Footer</Footer>
+      </Layout>
     </div>
   );
 }
 
-export default App;
+export default App
