@@ -18,6 +18,7 @@ const Login = () => {
                         prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                         type="text"
                         placeholder="Enter your username"
+                        style={{ width: 200 }}
                     />
                 </Form.Item>
                 <Form.Item>
@@ -25,6 +26,7 @@ const Login = () => {
                         prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                         type="password"
                         placeholder="Enter your password"
+                        style={{ width: 200 }}
                     />
                 </Form.Item>
                 <Form.Item>
