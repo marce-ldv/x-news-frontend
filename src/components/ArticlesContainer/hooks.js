@@ -12,9 +12,7 @@ export const useGetArticles = ( url ) => {
     }
 
     useEffect( () => {
-        fetchUrl( 
-            [ articles, loading ]
-        )
+        fetchUrl()
     }, [] )
     return [articles, loading];
 }
