@@ -17,7 +17,8 @@ const App = () => {
           <Navbar />
         </Header>
         <Content>
-            <ArticleMini/>
+          <ArticlesContainer />
+          
         </Content>
         <Footer>Footer</Footer>
       </Layout>

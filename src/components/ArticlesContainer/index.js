@@ -1,19 +1,22 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import axios from 'axios'
-import { useSomething } from './hooks'
+import { useGetArticles } from './hooks'
 import './styles.scss'
 
-// const a = useSomething()
-
 const ArticlesContainer = () => {
-
-    useEffect( () => {
-        return axios.get('http://localhost:4000/articles')
-    } )
+    const [ articles, loading ] = useGetArticles( 'http://localhost:4000/articles' );
 
     return (
         <div>
-            
+            {loading ? 
+                <div>
+                    Loading... Wait a momment
+                </div>
+            :
+                <div>
+                    {articles && articles.data.map( art => <div> title: {art.title} <br/> description: {art.description} </div> )}
+                </div>
+            }
         </div>
     )
 }
