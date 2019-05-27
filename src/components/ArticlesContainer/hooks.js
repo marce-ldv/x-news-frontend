@@ -1,12 +1,12 @@
 import React, { useEffect, useReducer, useState } from 'react'
-import axios from 'axios'
+import axiosInstance from '../../config/axiosInstance'
 
 export const useGetArticles = ( url ) => {
     const [articles,setArticles] = useState([]);
     const [loading,setLoading] = useState(true);
 
     const fetchUrl = async () => {
-        const response = await axios.get( url );
+        const response = await axiosInstance.get( url );
         setArticles(response);
         setLoading(false);
     }

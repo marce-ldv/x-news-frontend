@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from 'react'
-import axios from 'axios'
 import { useGetArticles } from './hooks'
 import './styles.scss'
 
 const ArticlesContainer = () => {
-    const [ articles, loading ] = useGetArticles( 'http://localhost:4000/articles' );
+    const [ articles, loading ] = useGetArticles('articles');
 
     return (
         <div>
