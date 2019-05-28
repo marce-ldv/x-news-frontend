@@ -1,24 +1,15 @@
-import { useEffect, useReducer, useState } from 'react'
-import axiosInstance from '../../config/axiosInstance'
+import { useEffect } from 'react';
+import axiosInstance from '../../core/axiosInstance';
 
 export const useLogin = ( url ) => {
-    console.log('url: ',url);
-
-    const [username,setUsername] = useState([]);
-    const [password,setPassword] = useState([]);
 
     const loginAxios = async ( formData ) => {
-        console.log('llegas al loginaxios?')
-        console.log('form data:', formData)
-        await axiosInstance.post( url, formData );
-        console.log(localStorage.getItem('token'))
-        debugger
-        setUsername(username);
-        setPassword(password);
-    }
+        const response = await axiosInstance.post( url, formData );
+        localStorage.setItem('token', response.data);
+    };
 
     useEffect( () => {
         loginAxios()
-    }, [] )
+    }, [] );
     return [loginAxios];
-}
+};

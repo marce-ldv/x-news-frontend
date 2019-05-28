@@ -1,7 +1,8 @@
 import React from 'react'
 import 'antd/dist/antd.css';
 import { Formik, Field, FieldArray } from 'formik';
-import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import { Form, Icon } from 'antd';
+import { InputCustom } from '../GlobalComponents/Input';
 import { useLogin } from './hooks';
 
 const Login = () => {
@@ -28,38 +29,21 @@ const Login = () => {
                         <Field
                             type="text"
                             name="username"
+                            prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                             placeholder="Enter your username"
+                            style={{ width: 200 }}
+                            component={InputCustom}
                         />
                         <Field
                             type="password"
                             name="password"
+                            prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                             placeholder="Enter your password"
+                            style={{ width: 200 }}
+                            component={InputCustom}
 
                         />
                     </Form.Item>
-                    {/* <Form.Item>
-                        <Field
-                            type="password"
-                            name="password"
-                            placeholder="Enter your password"
-                        />
-                    </Form.Item> */}
-                    {/* <Form.Item>
-                        <Input
-                            prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                            type="text"
-                            placeholder="Enter your username"
-                            style={{ width: 200 }}
-                        />
-                    </Form.Item>
-                    <Form.Item>
-                        <Input
-                            prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                            type="password"
-                            placeholder="Enter your password"
-                            style={{ width: 200 }}
-                        />
-                    </Form.Item> */}
                 </FieldArray>
                 {props.errors.name && <div id="feedback">{props.errors.name}</div>}
                 <button type="submit">Submit</button>

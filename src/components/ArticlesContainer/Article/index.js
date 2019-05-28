@@ -4,7 +4,7 @@ import './styles.scss'
 const Article = () => {
     return (
         <div>
-
+            
         </div>
     )
 }

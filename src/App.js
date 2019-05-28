@@ -1,14 +1,11 @@
 import React from 'react'
 import Navbar from './components/Navbar'
-import Drawer from './components/Drawer'
-import ArticlesContainer from './components/ArticlesContainer'
-import {ArticleMini} from "./components/ArticleMini";
-import Login from './components/Login'
 import { Layout } from 'antd'
 import './App.css'
 import "antd/dist/antd.css";
-
-const { Header, Footer, Sider, Content } = Layout;
+import { Switch, Route } from 'react-router';
+import routes from './core/router';
+const { Header, Footer, Content } = Layout;
 
 const App = () => {
   return (
@@ -18,13 +15,19 @@ const App = () => {
           <Navbar />
         </Header>
         <Content>
-          {/* <ArticlesContainer /> */}
-          <Login />
+            <Switch>
+              {routes && routes.map( r => (
+                  <Route
+                    exact={r.exact}
+                    path={r.path}
+                    component={r.component}
+                />))}
+            </Switch>
         </Content>
         <Footer>Footer</Footer>
       </Layout>
     </div>
   );
-}
+};
 
 export default App

@@ -1,9 +1,9 @@
-import React from 'react'
-import { Menu, Icon } from 'antd'
-import './styles.scss'
+import React from 'react';
+import { Menu, Icon } from 'antd';
+import './styles.scss';
 import "antd/dist/antd.css";
-const SubMenu = Menu.SubMenu
-const MenuItemGroup = Menu.ItemGroup
+const SubMenu = Menu.SubMenu;
+const MenuItemGroup = Menu.ItemGroup;
 
 const Navbar = () => {
     return(
