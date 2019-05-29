@@ -8,7 +8,7 @@ import {usePostArticles} from "./hooks";
 import { Toast } from '../Toast'
 
 const ModalCustom = (props) => {
-    const [modalText, setModalText] = useState('Content of the modal');
+    const [modalText, setModalText] = useState('Add an article');
     const [visible, setVisible] = useState(false);
     const [loading, setLoading] = useState(false);
     const [ addArticle ] = usePostArticles('articles');

@@ -20,11 +20,10 @@ const ArticlesContainer = () => {
                     Loading... Wait a momment
                 </div>
             :
-                <div>
+                <div className="articles-container">
                     {articles && articles.data.map( art =>
                         <Article
                             hoverable
-                            style={{width: 240}}
                             cover={
                                 <img
                                     alt={art.title}

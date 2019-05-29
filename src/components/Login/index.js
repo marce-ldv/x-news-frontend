@@ -19,9 +19,8 @@ const Login = () => {
         <Formik
         onSubmit={( values ) => {
             setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
                 handleSubmit( values );
-            }, 1000);
+            }, 500);
         }}
         render={props => (
             <form onSubmit={props.handleSubmit} className="form-login">
@@ -37,7 +36,7 @@ const Login = () => {
                         <Field
                             type="password"
                             name="password"
-                            prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+                            prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
                             placeholder="Enter your password"
                             component={InputCustom}
 

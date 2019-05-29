@@ -2,16 +2,12 @@ import React from 'react'
 import './styles.scss'
 import { Card } from "antd";
 
-const { Meta } = Card;
-
 const Article = (props) => {
     return (
-        <div>
+        <div className="card-el">
             <Card
                 {...props}
-            >
-
-            </Card>
+            />
         </div>
     )
 }
