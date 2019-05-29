@@ -1,10 +1,17 @@
 import React from 'react'
 import './styles.scss'
+import { Card } from "antd";
 
-const Article = () => {
+const { Meta } = Card;
+
+const Article = (props) => {
     return (
         <div>
-            
+            <Card
+                {...props}
+            >
+
+            </Card>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import { Layout } from 'antd'
-import './App.css'
+import './App.scss'
 import "antd/dist/antd.css";
 import { Switch, Route } from 'react-router';
 import routes from './core/router';
@@ -11,10 +11,10 @@ const App = () => {
   return (
     <div className="App">
       <Layout>
-        <Header>
+        <Header className="header">
           <Navbar />
         </Header>
-        <Content>
+        <Content className="content">
             <Switch>
               {routes && routes.map( r => (
                   <Route
@@ -24,7 +24,7 @@ const App = () => {
                 />))}
             </Switch>
         </Content>
-        <Footer>Footer</Footer>
+        <Footer className="footer">Footer</Footer>
       </Layout>
     </div>
   );

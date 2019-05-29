@@ -3,6 +3,7 @@ import 'antd/dist/antd.css';
 import { Formik, Field, FieldArray } from 'formik';
 import { Form, Icon } from 'antd';
 import { InputCustom } from '../GlobalComponents/Input';
+import { ButtonCustom } from '../GlobalComponents/Button';
 import { useLogin } from './hooks';
 
 const Login = () => {
@@ -12,7 +13,7 @@ const Login = () => {
     const handleSubmit = ( valuesForm ) => {
         console.log( valuesForm )
         loginAxios(valuesForm);
-    }
+    };
 
     return(
         <Formik
@@ -23,7 +24,7 @@ const Login = () => {
             }, 1000);
         }}
         render={props => (
-            <form onSubmit={props.handleSubmit}>
+            <form onSubmit={props.handleSubmit} className="form-login">
                 <FieldArray>
                     <Form.Item>
                         <Field
@@ -31,7 +32,6 @@ const Login = () => {
                             name="username"
                             prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                             placeholder="Enter your username"
-                            style={{ width: 200 }}
                             component={InputCustom}
                         />
                         <Field
@@ -39,18 +39,17 @@ const Login = () => {
                             name="password"
                             prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                             placeholder="Enter your password"
-                            style={{ width: 200 }}
                             component={InputCustom}
 
                         />
                     </Form.Item>
                 </FieldArray>
                 {props.errors.name && <div id="feedback">{props.errors.name}</div>}
-                <button type="submit">Submit</button>
+                <button type="primary" className="button-submit">Submit</button>
             </form>
             )}
         />
     );
-}
+};
 
 export default Login
